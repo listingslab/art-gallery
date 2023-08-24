@@ -1,13 +1,9 @@
 # Art Gallery
 
+A [Listingslab Goldlabel](https://listingslab.com) example app. Goldlabel Open Source is Forever Free
+
 - https://pwa-seo.app
 - https://studioqarnita.com
-
-A [Listingslab Goldlabel](https://listingslab.com) example website
-
-## Goldlabel Open Source
-
-Open Source and Forever Free
 
 #### Get started
 
