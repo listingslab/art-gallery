@@ -25,6 +25,7 @@ export default function Books(props: any) {
   const {frontmatter} = props
   const {
     bookSlug,
+    bookcover,
   } = frontmatter
   const theme = useTheme()
   const isBig = useMediaQuery(theme.breakpoints.up("md"))
@@ -69,6 +70,9 @@ export default function Books(props: any) {
                                     </Font>}
                           />
                         </ListItemButton>
+
+                
+
                         {bookSlug === itemBookSlug ? <>
                           {pageList.length ? <>
                             {pageList.map((item: any, i: number) => {
@@ -79,7 +83,9 @@ export default function Books(props: any) {
                                 title,
                                 icon,
                                 path,
+                                bookcover
                               } = frontmatter
+                              if(bookcover) return null
                               return <Box key={`page_${i}`} sx={{ml:2}}>
                                       <ListItemButton
                                         onClick={() => {

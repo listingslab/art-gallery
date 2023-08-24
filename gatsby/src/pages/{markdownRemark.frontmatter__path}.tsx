@@ -13,6 +13,7 @@ import {
   AppShell,
   Font,
   Books,
+  ShowPages,
 } from "../"
 
 export default function MarkdownPage(data:any) {
@@ -50,11 +51,19 @@ export default function MarkdownPage(data:any) {
               
               <CardContent>
                 <Grid container spacing={1}>
-                    {!bookcover ? <Grid item xs={12}><CardMedia
-                      height={isBig ? 320 : 150}
-                      component={"img"}
-                      src={image}
-                    /></Grid> : null }
+                    {!bookcover ? 
+                    <Grid item xs={12}>
+                      <CardMedia
+                        height={isBig ? 320 : 150}
+                        component={"img"}
+                        src={image}
+                      />
+                    </Grid> 
+                    : null }
+
+                    {bookcover ? <>
+                      <ShowPages frontmatter={frontmatter}/>
+                    </> : null}
                 
                     <Grid item xs={12}>
                       <Font>
@@ -92,23 +101,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-/*
-{bookcover ? <>
-                      <Grid item xs={12}>
-                        <ShowPages frontmatter={frontmatter}/>
-                        </Grid>
-                    </> : null }
-
-<CardHeader 
-              // avatar={<Icon icon={icon} color="primary"/>}
-              action={<><Share title={`${title}. ${description}`} /></>}
-              title={<Font variant="title">
-                      {title}
-                    </Font>}
-              subheader={<Font variant="small">
-                      {description}
-                    </Font>}
-            />
-
-                    */

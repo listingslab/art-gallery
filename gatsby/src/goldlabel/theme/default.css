@@ -11,7 +11,7 @@ body {
 }
 html {
   --scrollbarBG: none;
-  --thumbBG: #CE0000;
+  --thumbBG: #C09F52;
 }
 
 /* ul, li {
@@ -25,11 +25,11 @@ html {
   } */
   
   a {
-    color: #CE0000;
+    color: #C09F52;
     text-decoration: none;
   }
   a:hover {
-    color: #FB0909;
+    color: #C09F52;
   }
 
 pre {
