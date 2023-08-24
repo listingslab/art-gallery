@@ -11,12 +11,12 @@ Open Source and Forever Free
 
 #### Get started
 
-Identify where you're going to clone the repository. We'll call this `<working-repo>`. Decide on the machine readable name `<your-project>`. Clone the repo and install dependencies
+Identify where you're going to clone the repository. We'll call this `<working-repo>`. Decide on the machine readable name `<new-name>`. Clone the repo and install dependencies
 
 ```bash
 cd <working-dir>
-git clone https://github.com/listingslab-goldlabel/open-source <your-project>
-cd <your-project>
+git clone https://github.com/listingslab-goldlabel/art-gallery <new-name>
+cd <new-name>
 cd gatsby
 npm install
 cd ../
