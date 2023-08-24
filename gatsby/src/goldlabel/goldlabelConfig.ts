@@ -2,6 +2,7 @@ import {ConfigShape} from "../types"
 
 export const goldlabelConfig: ConfigShape = {
     siteUrl: "https://pwa-seo.app/",
+    siteEmail: "colz@studioqarnita.com",
     siteTitle: "Goldlabel Gallery",
     siteDescription: "Original Artwork for sale in Malta",
     siteKeywords: "listingslab, goldlabel, art gallery,",
@@ -12,7 +13,7 @@ export const goldlabelConfig: ConfigShape = {
     siteTheme: "#C09F52",
     themes: [
         {
-            title: "Goldlabel",
+            title: "Gallery",
             primaryColor: "#C09F52",
             secondaryColor: "#87703B",
             font: "gotham",
@@ -22,7 +23,6 @@ export const goldlabelConfig: ConfigShape = {
         collection: "gallery",
     },
     contexts: {
-        gallery: {
-        }
+        gallery: {}
     },
 }

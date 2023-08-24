@@ -7,5 +7,6 @@ title: "Pink Swathe"
 description: ""
 keywords: "acrylic pour, painting,"
 icon: "design"
-link: "https://www.facerape"
+stars: 1
 ---
+Acrylic Pouring results in a smooth, glossy paint film that is perfectly even and blemish free

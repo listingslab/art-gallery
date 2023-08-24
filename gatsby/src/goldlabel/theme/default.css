@@ -13,25 +13,16 @@ html {
   --scrollbarBG: none;
   --thumbBG: #C09F52;
 }
-
-/* ul, li {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-} */
-
-  /* h1, h2, h3, h4, h5, h6 {
-    color: #CE0000;
-  } */
-  
+  h1, h2, h3, h4, h5, h6 {
+    color: #C09F52;
+  } 
   a {
     color: #C09F52;
     text-decoration: none;
   }
   a:hover {
-    color: #C09F52;
+    color: #755c20;
   }
-
 pre {
   font-size: 0.5rem;
 }

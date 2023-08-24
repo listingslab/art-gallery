@@ -10,6 +10,7 @@ export const useAllMarkdown = () => {
             order
             title
             path
+            stars
             keywords
             image
             icon

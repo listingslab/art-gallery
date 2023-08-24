@@ -10,6 +10,7 @@ query BookCovers {
           bookSlug
           title
           path
+          stars
           description
           order
           keywords

@@ -11,6 +11,7 @@ export const usePagesByBookslug = (slug: string) => {
             order
             title
             path
+            stars
             keywords
             image
             icon

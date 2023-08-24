@@ -34,7 +34,6 @@ export default function MarkdownPage(data:any) {
   const {
     image,
     bookcover,
-    book
   } = frontmatter  
 
   return (
@@ -51,25 +50,29 @@ export default function MarkdownPage(data:any) {
               
               <CardContent>
                 <Grid container spacing={1}>
-                    {!bookcover ? 
-                    <Grid item xs={12}>
+                    {!bookcover ? <>
+                    
+                    {image ? <Grid item xs={12}>
                       <CardMedia
                         height={isBig ? 320 : 150}
                         component={"img"}
                         src={image}
                       />
-                    </Grid> 
+                    </Grid>  : null }
+                    </>
                     : null }
 
-                    {bookcover ? <>
-                      <ShowPages frontmatter={frontmatter}/>
-                    </> : null}
-                
+                    
+              
                     <Grid item xs={12}>
                       <Font>
                         <span dangerouslySetInnerHTML={{ __html: html }}/>
                       </Font>
                     </Grid>
+
+                    {bookcover ? <>
+                      <ShowPages frontmatter={frontmatter}/>
+                    </> : null}
                     
                 </Grid>
               </CardContent>
@@ -89,6 +92,7 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         order
+        stars
         bookSlug
         bookcover
         title

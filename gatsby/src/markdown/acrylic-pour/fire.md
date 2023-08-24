@@ -7,4 +7,5 @@ title: "Fire"
 description: ""
 keywords: "acrylic pour, painting,"
 icon: "design"
+stars: 4
 ---

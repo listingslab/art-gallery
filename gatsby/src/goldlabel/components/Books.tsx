@@ -8,6 +8,7 @@ import {
   ListItemIcon,
   ListItemText,
   Collapse,
+  Rating,
 } from "@mui/material"
 import {
   Icon,
@@ -25,7 +26,6 @@ export default function Books(props: any) {
   const {frontmatter} = props
   const {
     bookSlug,
-    bookcover,
   } = frontmatter
   const theme = useTheme()
   const isBig = useMediaQuery(theme.breakpoints.up("md"))
@@ -38,7 +38,6 @@ export default function Books(props: any) {
   } = pwa
 
   React.useEffect(() => {
-    // if(!isBig && books) dispatch(toggleBooks(false))
     if(isBig && !books) dispatch(toggleBooks(true))
   }, [isBig, books, dispatch])
   
@@ -55,6 +54,7 @@ export default function Books(props: any) {
                 path,
               } = frontmatter
               const itemBookSlug = frontmatter.bookSlug
+
               return <Box key={`book_${i}`}>
                         <ListItemButton
                           onClick={() => {
@@ -71,8 +71,6 @@ export default function Books(props: any) {
                           />
                         </ListItemButton>
 
-                
-
                         {bookSlug === itemBookSlug ? <>
                           {pageList.length ? <>
                             {pageList.map((item: any, i: number) => {
@@ -81,7 +79,7 @@ export default function Books(props: any) {
                               } = item
                               const {
                                 title,
-                                icon,
+                                stars,
                                 path,
                                 bookcover
                               } = frontmatter
@@ -91,12 +89,12 @@ export default function Books(props: any) {
                                         onClick={() => {
                                           dispatch(navigate(path, "_self"))
                                         }}>
-                                          <ListItemIcon>
-                                            <Icon icon={icon} color="primary"/>
-                                          </ListItemIcon>
-                                        <Font variant="small">
-                                          {title}
-                                         </Font>
+                                          <ListItemText 
+                                            primary={<Font variant="small">
+                                            {title}
+                                           </Font>}
+                                            secondary={stars ? <Rating readOnly value={stars} /> : null}
+                                          />
                                       </ListItemButton>
                                     </Box>
                             })}

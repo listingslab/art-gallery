@@ -7,6 +7,7 @@ import {
 
 const initialState: PwaReduxShape = {
   bootTime: Date.now(),
+  darkmode: false,
   books: true,
   pages: true,
   route: { href:null},
@@ -17,7 +18,7 @@ const initialState: PwaReduxShape = {
   account: false,
   addListing: false,
   user: null,
-  darkmode: false,
+  
 }
 
 export const pwaSlice = createSlice({

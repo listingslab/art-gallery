@@ -7,6 +7,7 @@ import GoldlabelIcon from './SVGIcons/GoldenticketIcon'
 import BedIcon from "@mui/icons-material/Bed"
 import BikeIcon from "@mui/icons-material/Moped"
 import BusinessIcon from "@mui/icons-material/Business"
+import CoronaIcon from "@mui/icons-material/Coronavirus"
 import AddYourselfIcon from "@mui/icons-material/AddBusiness"
 import PauseIcon from "@mui/icons-material/Pause"
 import SupermarketIcon from "@mui/icons-material/Storefront"
@@ -160,6 +161,14 @@ export default function Icon(props: any) {
       case "package":
         iconFragment = <PackageIcon color={color} />
         break
+
+        case "gallery":
+          iconFragment = <CoronaIcon color={color} />
+          break
+
+          case "corona":
+            iconFragment = <CoronaIcon color={color} />
+            break   
 
       case "car":
         iconFragment = <CarIcon color={color} />

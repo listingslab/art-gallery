@@ -25,6 +25,7 @@ export type ThemeShape = {
 
 export type ConfigShape = {
   siteTitle: string
+  siteEmail: string
   siteDescription: string
   siteUrl: string
   siteType: string

@@ -7,5 +7,5 @@ title: "Blue Corners"
 description: ""
 keywords: "acrylic pour, painting,"
 icon: "design"
-link: "https://www.facerape"
+stars: 4
 ---
