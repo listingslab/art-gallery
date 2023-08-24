@@ -2,6 +2,7 @@ import React from "react"
 import {
   useTheme,
   useMediaQuery,
+  Avatar,
   Box,
   CardHeader,
   Container,
@@ -47,14 +48,16 @@ export default function SiteHeader(props:any) {
                   <Container maxWidth="md">
                     <CardActionArea
                       disableRipple
-                      disabled={isBig}
                       onClick={(e: React.MouseEvent) => {
                         e.preventDefault()
-                        dispatch(toggleBooks(!books))
+                        if (isBig){
+                          dispatch(navigate("/", "_self"))
+                        } else {
+                          dispatch(toggleBooks(!books))
+                        }
                       }}>
                         <CardHeader 
-                          avatar={<Icon icon={pageIcon} color="primary"/>}
-
+                          avatar={<Avatar src={"/svg/iOS.svg"} alt={pageTagline} />}
                           title={isBig ? <Font variant="title" >
                                             {pageTitle}
                                           </Font> : <Font variant="small" >

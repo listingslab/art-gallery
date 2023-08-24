@@ -6,6 +6,6 @@ title: "Home"
 description: "Original Artwork for sale in Malta"
 keywords: "listingslab, goldlabel, art gallery,"
 path: "/"
-icon: "right"
-image: "/jpg/paintings/triangles.jpg"
+icon: "up"
+image: "/jpg/paintings/yehnah.jpg"
 ---

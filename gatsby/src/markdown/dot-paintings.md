@@ -5,6 +5,6 @@ bookSlug: "dot-paintings"
 path: "/dot-paintings"
 title: "Dot Paintings"
 description: ""
-icon: "design"
-image: "/jpg/paintings/creek-bed.jpg"
+icon: "expand"
+image: "/jpg/paintings/yehnah.jpg"
 ---

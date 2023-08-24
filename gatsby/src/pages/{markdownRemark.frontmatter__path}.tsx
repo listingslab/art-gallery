@@ -31,10 +31,9 @@ export default function MarkdownPage(data:any) {
   const { frontmatter, html } = markdownRemark
   if (!frontmatter) return null
   const {
-    title,
-    description,
     image,
     bookcover,
+    book
   } = frontmatter  
 
   return (
@@ -51,28 +50,23 @@ export default function MarkdownPage(data:any) {
               
               <CardContent>
                 <Grid container spacing={1}>
-
-                    <Grid item xs={12}><CardMedia
-                      
+                    {!bookcover ? <Grid item xs={12}><CardMedia
+                      height={isBig ? 320 : 150}
                       component={"img"}
                       src={image}
-                    /></Grid>
-                  
-
+                    /></Grid> : null }
+                
                     <Grid item xs={12}>
                       <Font>
                         <span dangerouslySetInnerHTML={{ __html: html }}/>
                       </Font>
                     </Grid>
-                  
-
                     
                 </Grid>
               </CardContent>
                         
           </Box>         
         </Grid>
-        
         
       </Grid>
     </AppShell>
